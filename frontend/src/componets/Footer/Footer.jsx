@@ -1,10 +1,36 @@
+import logo from "../../../images/logo.png";
 export default function Footer() {
     return (
-        <div className="footer__content">
-            <div >
-                <img src="" alt="intagram" className="intagram__logo" />
 
+        <div className="footer__content">
+            <div className="footer__logo">
+                <img src={logo} alt="logo" className="footer__logo" />
             </div>
-        </div>
+            <div className="about__us">
+                <div className="about__us"> sobre nosotros</div>
+                <div className="modo__uso">
+                    <p>modo de uso</p>
+                </div>
+                <div className="asks">
+                    <p>preguntas frecuentes</p>
+                </div>
+            </div>
+            <div className="footer__contact">contacto
+                <div className="footer__mail">
+                    <p>correo: barba@barba.com</p>
+                </div>
+
+                <div className="footer__whatsapp">
+                    <p >whatsapp 1123933206</p>
+                </div>
+
+                <div >
+                    <p>instagram: @barba</p>
+
+
+                </div>
+            </div>
+
+        </div >
     );
 }

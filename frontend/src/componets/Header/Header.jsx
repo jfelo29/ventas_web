@@ -1,17 +1,36 @@
 import logo from "../../../images/logo.png";
-export default function Header() {
+import { Link } from "react-router-dom";
+// import { useNavigate, useLocation } from "react-router-dom";
+import CurrentUserContext from "../contexts/currentUserContext";
+import { useContext } from "react";
+export default function Header(props) {
+    const currentUser = useContext(CurrentUserContext);
+    //const navigate = useNavigate();
+    //const location = useLocation();
     return (
         <header className="header">
+
             <div className="header__container">
 
                 <img src={logo} alt="logo" className="header__logo" />
 
                 <div className="header__right">
-                    <span className="header__mail">correo@correo.com</span>
-                    <button className="header__button" >cerrar sesion</button>
-                </div>
+                    <div className="redes">redes</div>
+                    <div className="whatsapp">whatsapp</div>
+                    {currentUser?.id ? (
+                        <div>
+                            <span className="header__mail">{props.email}</span>
+                            <button className="header__button" onClick={props.handleSignout} >cerrar sesion</button>
+                        </div>
 
+                    ) : location.pathname === "/login" ? (
+                        <link to="/register" className="header__button">Registrate</link>
+                    ) : (
+                        <Link to="/login" className="header__button">Iniciar Sesion</Link>
+                    )}
+                </div>
             </div>
-        </header>
+
+        </header >
     );
 }

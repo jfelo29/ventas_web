@@ -1,39 +1,62 @@
 .header {
+
 margin-top: auto;
 padding: 45px 0;
 /*background-color:rgba(218, 179, 161, 0.9);*/
 background-color: black;
-   
 }
 
 .header__logo {
 
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 30%;
     margin-left: 50px;
 }
 .header__right   {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
+    color: white;
+    gap: 40px;
+    font-size: 40px;
+
 }
 
 .header__mail {
     font-size: 20px;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    margin-right: 50px;
+    margin-right: 300px;
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
     
 }
-
+.contact {
+    color: white;
+    
+    font-size: 40px;
+    position: fixed;
+    
+    
+}
+.whatsapp {
+    color: white;
+    padding-right: 600px;
+    font-size: 40px;
+}
 .header__button {
     background-color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
-    margin-right: 50px
+    margin-right: 50px;
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
+
     
 }
