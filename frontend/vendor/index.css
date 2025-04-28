@@ -1,3 +1,4 @@
+@import url(./normalize.css);
 @import url(../src/componets/Header/header.css);
 @import url(../src/componets/Main/main.css);
 @import url(../src/componets/Footer/footer.css);

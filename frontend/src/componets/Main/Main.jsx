@@ -2,6 +2,8 @@ import unidad from "../../../images/minoxidil_unidad.png";
 import triple from "../../../images/minoxidil_x3.png";
 import caja from "../../../images/minoxidil_caja.png";
 import correoImagen from "../../../images/correo.png";
+import whatsapp from "../../../images/whatsapp.png";
+
 import Popup from "../../Popup/Popup";
 export default function Main() {
 
@@ -11,7 +13,8 @@ export default function Main() {
     return (
 
         <div className="main">
-            <h2 className="main__subtitle">Conoce Nuestros Productos</h2>
+
+            <h2 className="main__subtitle" id="about-us">Conoce Nuestros Productos</h2>
             <p className="main__explain">Nuestros productos son originales e importados. realmente aca quiero poner un texto aun mas largo que aun no tengo muy en claro. </p>
             <div className="main__content">
                 <div className="card cardS__list">
@@ -78,6 +81,29 @@ export default function Main() {
                 <h2 className="main__envios__title">Envios a todo el pais</h2>
                 <p className="main__envios__text">hacemos envios a todo el pais por medio de correo argentino.</p>
                 <img src={correoImagen} alt="correo_argentino" className="main__envios__imagen" />
+            </div>
+            <div className="use__explain">
+                <h2 className="use__title" id="">Modo de uso</h2>
+                <p className="use__text">primer paso para usar Minoxidil es que tu pelo y o zona de la barba  debe estar limpio y bien seco. Debes aplicarlo en la zona a tratar, zona de cuero cabelludo o barba.
+
+
+                    La dosis diaria recomendada es de 1 ml de la solución cada 12horas empezando por el centro de la zona a tratar. Se deberá respetar la dosis diaria recomendada independientemente de la extensión de la alopecia. La dosis máxima diaria recomendada es de 2 ml.
+
+                    La sobredosis accidental o voluntaria tras la aplicación tópica de minoxidil5% producirá un aumento en la intensidad de efectos adversos de tipo dermatológicos, especialmente prurito (picor), sequedad, irritación cutánea y eccema.
+
+                    Al finalizar la utilización de Minoxidil se recomienda el lavado de las manos con abundante agua para evitar el crecimiento de pelo en zonas no deseadas.
+
+                    Los resultado se ven según la persona entre el 2do y el 3er mes de uso continuó.
+
+                    Después de utilizar el frasco con el Minoxidil debes volver a taparlo y conservarlo en un lugar seco que no esté en contacto directo con la luz solar. No conservar a temperatura superior a 30ºC.</p>
+            </div>
+            <div>
+                <a href="https://api.whatsapp.com/send?phone=5491123933206"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-fixed">
+                    <img src={whatsapp} alt="WhatsApp" />
+                </a>
             </div>
         </div>
 

@@ -6,8 +6,8 @@ export default function Footer() {
             <div className="footer__logo">
                 <img src={logo} alt="logo" className="footer__logo" />
             </div>
-            <div className="about__us">
-                <div className="about__us"> sobre nosotros</div>
+            <div className="about__us" >
+                <a className="about__us" href="#about-us"> sobre nosotros</a>
                 <div className="modo__uso">
                     <p>modo de uso</p>
                 </div>
@@ -15,7 +15,7 @@ export default function Footer() {
                     <p>preguntas frecuentes</p>
                 </div>
             </div>
-            <div className="footer__contact">contacto
+            <div className="footer__contact" >contacto
                 <div className="footer__mail">
                     <p>correo: barba@barba.com</p>
                 </div>

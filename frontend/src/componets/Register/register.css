@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: center;
     width: 580px;
-    height: 580px;
+    height: 800px;
     background-color: rgb(14, 13, 13);
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(10, 10, 10);
@@ -26,32 +26,47 @@
     justify-content: center;
     margin-bottom:100px;
     gap: 30px;
-    
+    background: linear-gradient(45deg, rgb(20, 20, 20), rgb(177, 139, 101));
 }
 
 .imput__name {
+    margin-top: ;
     width: 500px;
     height: 50px;
     border-radius: 5px;
-    background-color: rgb(241, 216, 216);
+    
 }
 .imput__number {
     width: 500px;
     height: 50px;
     border-radius: 5px;
     margin-bottom: 10px;
-    background-color: rgb(241, 216, 216);
+    
 }
 .imput__email {
     width: 500px;
     height: 50px;
     border-radius: 5px;
-    background-color: rgb(241, 216, 216);
+    
 }
 .imput__password {
     width: 500px;
     height: 50px;
     border-radius: 5px;
     margin-bottom: 10px;
-    background-color: rgb(241, 216, 216);
+    
+}
+.register__button {
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(14, 13, 13);
+    color: rgb(250, 248, 248);
+    font-size: 20px;
+}
+
+.new__login {
+    font-size: 20px;
+    color: rgb(241, 216, 216);
+    cursor: pointer;
 }

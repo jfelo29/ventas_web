@@ -12,12 +12,13 @@ export default function Header(props) {
         <header className="header">
 
             <div className="header__container">
-
-                <img src={logo} alt="logo" className="header__logo" />
-
+                <div className="header__left">
+                    <img src={logo} alt="logo" className="header__logo" />
+                    <p className="header__name">minoxidil.kirkland.barba</p>
+                </div>
                 <div className="header__right">
-                    <div className="redes">redes</div>
-                    <div className="whatsapp">whatsapp</div>
+                    <div className="another__product">otros productos</div>
+                    <a target="_blank" className="seguimiento" href="https://www.correoargentino.com.ar/seguimiento-de-envios">seguimiento</a>
                     {currentUser?.id ? (
                         <div>
                             <span className="header__mail">{props.email}</span>

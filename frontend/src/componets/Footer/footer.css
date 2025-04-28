@@ -21,6 +21,10 @@
     align-items: center;
     color: blanchedalmond;
     font-size: 18px;
+    background: linear-gradient(45deg, rgb(20, 20, 20), rgb(177, 139, 101));
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
     
 
     
@@ -34,6 +38,8 @@
     
 }
 .footer__contact {
+    width: 200px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +47,8 @@
     color: blanchedalmond;
     margin-right: 200px;
     padding: 0px;
+    background: linear-gradient(45deg, rgb(20, 20, 20), rgb(177, 139, 101));
+    border-radius: 10%;
 }
 .intagram__logo {
     width: 50px;
