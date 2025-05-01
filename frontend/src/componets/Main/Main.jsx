@@ -2,7 +2,7 @@ import unidad from "../../../images/minoxidil_unidad.png";
 import triple from "../../../images/minoxidil_x3.png";
 import caja from "../../../images/minoxidil_caja.png";
 import correoImagen from "../../../images/correo.png";
-import whatsapp from "../../../images/whatsapp.png";
+import whatsapp from "../../../images/whatsapp-3.svg";
 
 import Popup from "../../Popup/Popup";
 export default function Main() {
@@ -15,7 +15,7 @@ export default function Main() {
         <div className="main">
 
             <h2 className="main__subtitle" id="about-us">Conoce Nuestros Productos</h2>
-            <p className="main__explain">Nuestros productos son originales e importados. realmente aca quiero poner un texto aun mas largo que aun no tengo muy en claro. </p>
+            <p className="main__explain">minoxidil kirkland para barba y cabello, puedes elegir entre 3 opciones. frasco unidad de 60ml, 3 frasco  de 60 ml cada uno o caja por 6 unidades de 60 ml. <br /> La caja  </p>
             <div className="main__content">
                 <div className="card cardS__list">
                     <div className="card_portada">
@@ -83,8 +83,8 @@ export default function Main() {
                 <img src={correoImagen} alt="correo_argentino" className="main__envios__imagen" />
             </div>
             <div className="use__explain">
-                <h2 className="use__title" id="">Modo de uso</h2>
-                <p className="use__text">primer paso para usar Minoxidil es que tu pelo y o zona de la barba  debe estar limpio y bien seco. Debes aplicarlo en la zona a tratar, zona de cuero cabelludo o barba.
+                <h2 className="title__main" id="modo-uso">Modo de uso</h2>
+                <p className="text__main">primer paso para usar Minoxidil es que tu pelo y o zona de la barba  debe estar limpio y bien seco. Debes aplicarlo en la zona a tratar, zona de cuero cabelludo o barba.
 
 
                     La dosis diaria recomendada es de 1 ml de la solución cada 12horas empezando por el centro de la zona a tratar. Se deberá respetar la dosis diaria recomendada independientemente de la extensión de la alopecia. La dosis máxima diaria recomendada es de 2 ml.
@@ -97,16 +97,27 @@ export default function Main() {
 
                     Después de utilizar el frasco con el Minoxidil debes volver a taparlo y conservarlo en un lugar seco que no esté en contacto directo con la luz solar. No conservar a temperatura superior a 30ºC.</p>
             </div>
-            <div>
-                <a href="https://api.whatsapp.com/send?phone=5491123933206"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="whatsapp-fixed">
-                    <img src={whatsapp} alt="WhatsApp" />
-                </a>
+            <div className="preguntas__frecuentes">
+                <h2 className="title__main" id="preguntas-frecuentes">Preguntas frecuentes</h2>
+                <p className="text__main">
+                    -el producto es original?<br />
+                    -si es original, es un producto importado. <br />
+                    -hacen envios? <br />
+                    - si, hacemos envios a todo el pais y entregas en CABA. <br />
+                    - cuales son los medios de pago? <br />
+                    - Se puede pagar en efectivo, transferencia, pago con tarjeta brde credito. <br />
+
+                </p>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=5491123933206"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="whatsapp-fixed">
+                        <img src={whatsapp} alt="WhatsApp" />
+                    </a>
+                </div>
             </div>
         </div>
-
     );
 
 }
