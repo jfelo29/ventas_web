@@ -8,6 +8,16 @@ import Popup from "../../Popup/Popup";
 export default function Main() {
 
 
+    //Adentro de un efecto (useEffect)
+    fetch("https://6813a9f5129f6313e211fc92.mockapi.io/products")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        //Esto se tiene que guardar en un estado (useState)
+    })
+    .catch(error => {
+        console.error("Error al obtener los datos:", error);
+    });
 
 
     return (
@@ -17,7 +27,8 @@ export default function Main() {
             <h2 className="main__subtitle" id="about-us">Conoce Nuestros Productos</h2>
             <p className="main__explain">minoxidil kirkland para barba y cabello, puedes elegir entre 3 opciones. frasco unidad de 60ml, 3 frasco  de 60 ml cada uno o caja por 6 unidades de 60 ml. <br /> La caja  </p>
             <div className="main__content">
-                <div className="card cardS__list">
+                {/* Aca hay que mapear el estado de los productos */}
+                {/* <div className="card cardS__list">
                     <div className="card_portada">
                         <img src={unidad} alt="unidad_minoxidil" className="unidad_minoxidil" />
                     </div>
@@ -74,7 +85,7 @@ export default function Main() {
 
 
                     </div>
-                </div>
+                </div> */}
 
             </div>
             <div className="main__envios">
