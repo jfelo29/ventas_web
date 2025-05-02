@@ -39,6 +39,10 @@ border-radius: 30px;
 
 
 }
+.card__image{
+   max-width: 160px;
+   max-height: 180px;
+}
 .cardS__list {
     margin: 0 auto;
     display: flex;

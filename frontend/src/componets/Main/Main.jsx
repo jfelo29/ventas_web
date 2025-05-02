@@ -1,23 +1,22 @@
-import unidad from "../../../images/minoxidil_unidad.png";
-import triple from "../../../images/minoxidil_x3.png";
-import caja from "../../../images/minoxidil_caja.png";
+//import unidad from "../../../images/minoxidil_unidad.png";
+// import triple from "../../../images/minoxidil_x3.png";
+// import caja from "../../../images/minoxidil_caja.png";
 import correoImagen from "../../../images/correo.png";
 import whatsapp from "../../../images/whatsapp-3.svg";
+import { useState } from "react";
+import { useEffect } from "react";
+import { api } from "../../../utils/api";
+import Card from "../Card/card";
 
 import Popup from "../../Popup/Popup";
 export default function Main() {
+    const [cards, setCards] = useState([]);
+    useEffect(() => {
+        api.getCards().then(data => { setCards(data); });
+    }, []);
 
+    https://api.mercadolibre.com/sites/MLA/search?seller_id=VIFE6306800
 
-    //Adentro de un efecto (useEffect)
-    fetch("https://6813a9f5129f6313e211fc92.mockapi.io/products")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        //Esto se tiene que guardar en un estado (useState)
-    })
-    .catch(error => {
-        console.error("Error al obtener los datos:", error);
-    });
 
 
     return (
@@ -28,8 +27,14 @@ export default function Main() {
             <p className="main__explain">minoxidil kirkland para barba y cabello, puedes elegir entre 3 opciones. frasco unidad de 60ml, 3 frasco  de 60 ml cada uno o caja por 6 unidades de 60 ml. <br /> La caja  </p>
             <div className="main__content">
                 {/* Aca hay que mapear el estado de los productos */}
-                {/* <div className="card cardS__list">
-                    <div className="card_portada">
+
+                {cards.map(card => (
+                    <Card
+                        card={card}
+
+                    />
+                ))}
+                {/*<div className="card_portada">
                         <img src={unidad} alt="unidad_minoxidil" className="unidad_minoxidil" />
                     </div>
                     <div>
@@ -84,8 +89,8 @@ export default function Main() {
 
 
 
-                    </div>
-                </div> */}
+                    </div>*/}
+
 
             </div>
             <div className="main__envios">

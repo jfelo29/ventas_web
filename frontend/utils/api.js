@@ -1,10 +1,28 @@
 
-class Api {
+export default class Api {
     constructor() {
-        this.baseUrl = "http://localhost:3000";
+        this.baseUrl = "https://6813a9f5129f6313e211fc92.mockapi.io";
 
     }
 
+    getCards() {
+        return fetch(`${this.baseUrl}/products`)
+            .then(response => response.json())
+            .then(data => { return data; })
+            .catch(error => {
+                console.error("Error al obtener los datos:", error);
+            });
 
-
+        /*return fetch(`${this.baseUrl}/products`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                return data;
+            })
+            .catch(error => {
+                console.error("Error al obtener los datos:", error);
+            });
+    */
+    }
 }
+export const api = new Api();
