@@ -10,6 +10,7 @@ import Card from "../Card/card";
 
 import Popup from "../../Popup/Popup";
 export default function Main() {
+    //const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState([]);
     useEffect(() => {
         api.getCards().then(data => { setCards(data); });
