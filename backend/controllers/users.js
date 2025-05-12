@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
-const User = require('../models/user');
+const User = require('../models/users');
+
 
 const getAllUsers = async (req, res) => {
     try {
@@ -43,47 +44,16 @@ const createUser = async (req, res) => {
             })
             .then(async (newUser) => {
                 const user = await newUser.save();
-                if (!user === "usuario no encontrado") {
-                    return res.status(404).send({ message: 'No encontrado' });
+                if (!user === 'usuario no encontrado') {
+                    return res.status(404).send({ message: 'usuario no encontrado' });
                 }
-                res.status(201).json(user);
-            })
-            .catch(error => {
-                res.status(500).json({ error: 'Error al crear usuario' });
-            });
-
-    });
-};
-
-/*const updateUser = async (req, res) => {
-    try {
-        const { name, email, password } = req.body;
-        bcrypt.hash(password, 10)
-            .then(hash => {
-                const user = new User(
-                    {
-                        name,
-                        email,
-                        password: hash,
-                    },
-                )
-                return user;
-            })
-            .then(async (newUser) => {
-                const user = await newUser.save();
-                if (!user === "usuario no encontrado") {
-                    return res.status(404).send({ message: 'No encontrado' });
-                }
-                res.status(201).json(user);
-            })
-            .catch(error => {
-                res.status(500).json({ error: 'Error al crear usuario' });
+                return res.status(201).send(user);
             });
     } catch (error) {
-        res.status(500).json({ error: 'Error al actualizar usuario' });
+        return res.status(500).send({ message: 'Error al obtener el usuario' });
     }
 };
-*/
+
 module.exports = {
     getAllUsers,
     getUserById,

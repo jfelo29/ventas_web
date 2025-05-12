@@ -12,17 +12,6 @@ export default class Api {
             .catch(error => {
                 console.error("Error al obtener los datos:", error);
             });
-
-        /*return fetch(`${this.baseUrl}/products`)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                return data;
-            })
-            .catch(error => {
-                console.error("Error al obtener los datos:", error);
-            });
-    */
     }
 }
 export const api = new Api();

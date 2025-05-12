@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const signin = require('./controllers/signin');
 const users = require('./controllers/users');
-const auth = require('./middlewares/auth');
+const auth = require('./middlewere/auth');
 
 
 const app = express();
@@ -19,12 +19,12 @@ mongoose.connect('mongodb://127.0.0.1:27018').then(() => {
     console.log('Error al conectar a MongoDB');
 });
 
-app.use('/auth', auth.auth);
+/*app.use('/auth', auth.auth);
 app.use('/', usersRouter);
 app.use('/', cardsRouter);
 app.use(requestLogger);
 app.use('/signin', signin.signin);
-app.use('/signup', users.createUser);
+app.use('/signup', users.createUser);*/
 app.use((err, req, res, next) => {
     res.status(500).send({ message: err.message });
 });

@@ -10,13 +10,16 @@ import Card from "../Card/card";
 
 import Popup from "../../Popup/Popup";
 export default function Main() {
-    //const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState([]);
     useEffect(() => {
-        api.getCards().then(data => { setCards(data); });
+        api.getCards().then(data => {
+            setCards(data);
+            setLoading(false);
+        });
     }, []);
 
-    https://api.mercadolibre.com/sites/MLA/search?seller_id=VIFE6306800
+
 
 
 
@@ -27,70 +30,20 @@ export default function Main() {
             <h2 className="main__subtitle" id="about-us">Conoce Nuestros Productos</h2>
             <p className="main__explain">minoxidil kirkland para barba y cabello, puedes elegir entre 3 opciones. frasco unidad de 60ml, 3 frasco  de 60 ml cada uno o caja por 6 unidades de 60 ml. <br /> La caja  </p>
             <div className="main__content">
-                {/* Aca hay que mapear el estado de los productos */}
 
-                {cards.map(card => (
-                    <Card
-                        card={card}
+                {loading ? (
+                    {
+                        cards.map(card => (
+                            <Card
+                                card={card}
 
-                    />
-                ))}
-                {/*<div className="card_portada">
-                        <img src={unidad} alt="unidad_minoxidil" className="unidad_minoxidil" />
-                    </div>
-                    <div>
-
-                        <h3 >
-                            <a className="name__product"
-                                href="https://vife6306800.mercadoshops.com.ar/locion-barba-aceite-estimulante/up/MLAU303285170?pdp_filters=category%3AMLA417772%7Cseller_id%3A152685387%7Citem_id%3AMLA903193820#position=1&search_layout=stack&type=item&tracking_id=333e0122-9c8b-4e2a-8634-34b90e2db8ee">unidad minoxidil</a>
-                        </h3>
-                        <div className="card__price" >
-                            <span  >24.000
-                            </span>
-
-                        </div>
+                            />
+                        ))
+                    }
+                )}
 
 
 
-                    </div>
-                </div>
-                <div className="card cardS__list">
-                    <div className="card_portada">
-                        <img src={triple} alt="unidad_minoxidil" className="triple_minoxidil" />
-                    </div>
-                    <div>
-
-                        <h3 >
-                            <a className="name__product" href="https://vife6306800.mercadoshops.com.ar/locion-barba-aceite-estimulante/up/MLAU303285170?pdp_filters=category%3AMLA417772%7Cseller_id%3A152685387%7Citem_id%3AMLA903193820#position=1&search_layout=stack&type=item&tracking_id=333e0122-9c8b-4e2a-8634-34b90e2db8ee">3 minoxidil</a>
-                        </h3>
-                        <div className="card__price">
-                            <span>79.000
-                            </span>
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-                <div className="card cardS__list">
-                    <div className="card_portada">
-                        <img src={caja} alt="caja_minoxidil" className="caja_minoxidil" />
-                    </div>
-                    <div>
-
-                        <h3 >
-                            <a className="name__product" href="https://vife6306800.mercadoshops.com.ar/locion-barba-aceite-estimulante/up/MLAU303285170?pdp_filters=category%3AMLA417772%7Cseller_id%3A152685387%7Citem_id%3AMLA903193820#position=1&search_layout=stack&type=item&tracking_id=333e0122-9c8b-4e2a-8634-34b90e2db8ee">caja minoxidil </a>
-                        </h3>
-                        <div className="card__price">
-                            <span >145.000
-                            </span>
-
-                        </div>
-
-
-
-                    </div>*/}
 
 
             </div>
