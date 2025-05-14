@@ -7,15 +7,24 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { api } from "../../../utils/api";
 import Card from "../Card/card";
-
+import PreLoader from "../Preloader/preloader";
 import Popup from "../../Popup/Popup";
+import { set } from "mongoose";
 export default function Main() {
     const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState([]);
+
     useEffect(() => {
+
         api.getCards().then(data => {
             setCards(data);
-            setLoading(false);
+            setTimeout(() => {
+                setLoading(false);
+
+            }, 4000000);
+            // setLoading(false);
+
+
         });
     }, []);
 
@@ -31,16 +40,12 @@ export default function Main() {
             <p className="main__explain">minoxidil kirkland para barba y cabello, puedes elegir entre 3 opciones. frasco unidad de 60ml, 3 frasco  de 60 ml cada uno o caja por 6 unidades de 60 ml. <br /> La caja  </p>
             <div className="main__content">
 
-                {loading ? (
-                    {
-                        cards.map(card => (
-                            <Card
-                                card={card}
+                {loading ? (<PreLoader />) : cards.map(card => (
+                    <Card
+                        card={card}
 
-                            />
-                        ))
-                    }
-                )}
+                    />
+                ))}
 
 
 

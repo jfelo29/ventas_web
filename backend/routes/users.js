@@ -1,9 +1,11 @@
 const router = require('express').Router();
-const { celebrate, Joi } = require('express-validator');
+const { celebrate, Joi } = require('celebrate');
 const validator = require('validator');
-const { getAllUsers, getUserById, } = require('../controllers/users');
-const Users = require('../models/user');
-const auth = require('../middlewere/auth');
+const { getAllUsers, getUserById, createUser, deleteUser } = require('../controllers/users');
+const Users = require('../models/users');
+const auth = require('../middlewares/auth');
+const { number } = require('joi');
+
 
 const valideURL = (value, helpers) => {
  if (!validator.isURL(value)) {
@@ -13,17 +15,18 @@ const valideURL = (value, helpers) => {
 
 };
 
-router.get('users', getAllUsers);
-router.get('/users/me', auth.auth, getUserById);
+router.get('/users', getAllUsers);
+//router.get('/users/me', auth, getUserById);
 router.get('/users/:id', getUserById);
 router.post('/users', celebrate({
  body: Joi.object().keys({
   name: Joi.string().min(3).max(50).required(),
+  number: Joi.number().min(1000000000).max(999999999999).required(),
   email: Joi.string().email().required(),
   password: Joi.string().min(2).max(100).required(),
  }),
 }), createUser);
-router.patch('/users/me', auth.auth, async (req, res) => {
+router.patch('/users/me', auth, async (req, res) => {
  try {
   const { name, email, password } = req.body;
   const user = await User.findById(req.user._id);
@@ -39,6 +42,6 @@ router.patch('/users/me', auth.auth, async (req, res) => {
   res.status(500).json({ error: 'Error al actualizar usuario' });
  }
 });
-
+router.delete('/users/:id', auth, deleteUser);
 
 module.exports = router;

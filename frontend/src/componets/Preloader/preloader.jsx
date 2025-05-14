@@ -1,23 +1,22 @@
-import { use } from "react";
-
-const preloader = () => {
- const [loading, setLoading] = useState(false);
-
- useEffect(() => {
-  setLoading(true);
-  setTimeout(() => {
-   setLoading(false);
-  }, 2000);
-  []
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+export default function PreLoader() {
   return (
-   { loading?<loader/>: <> </><div></div> </>
-     }
- )
-};
+    <div className="preloader">
+      <SkeletonTheme color="#202020" highlightColor="#444">
+        <p>
+          <Skeleton count={3} />
+        </p>
+      </SkeletonTheme>;
+    </div>
+  );
+}
 
-export default preloader;
 
 
 
 
-// tendria 2 ideas una es ponerlo en el comienzo de la pagina y la otra en los prodcutos, prefiero ponerla en los productos 
+
+
+
+
+
