@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Register(props) {
     const { signup } = props;
-    const [data, setData] = useState("")
+    const [data, setData] = useState({});
 
     const handleChange = (e) => {
         setData((prevData) => ({
@@ -13,21 +13,24 @@ export default function Register(props) {
     };
 
     function handleSubmit(e) {
+        console.log(data);
+
         e.preventDefault();
-        signup({ email: data.email, password: data.password });
+        signup({ email: data.email, password: data.password, name: data.name, number: data.number });
     };
     return (
         <div className="register">
             <p className="register__title"
                 onClick={props.handleOpenPopup}>Registrate</p>
             <form className="register__form" id="form-register">
-                <input type="name"
+                <input type="text"
                     placeholder="Nombre"
+                    name="name"
                     id="name"
                     className="imput__name"
                     required
                     value={data.name}
-                    onchange={(event) => handleChange(event)} />
+                    onChange={(event) => handleChange(event)} />
                 <span className="register__input-error"></span>
                 <input type="number"
                     name="number"
@@ -36,7 +39,7 @@ export default function Register(props) {
                     className="imput__number"
                     required
                     value={data.number}
-                    onchange={(event) => handleChange(event)} />
+                    onChange={(event) => handleChange(event)} />
                 <span className="register__input-error"></span>
                 <input type="email"
                     name="email"
@@ -45,7 +48,7 @@ export default function Register(props) {
                     className="imput__email"
                     required
                     value={data.email}
-                    onchange={(event) => handleChange(event)}
+                    onChange={(event) => handleChange(event)}
                 />
                 <span className="register__input-error"></span>
 
@@ -57,11 +60,11 @@ export default function Register(props) {
                     className="imput__password"
                     required
                     value={data.password}
-                    onchange={(event) => handleChange(event)}
+                    onChange={(event) => handleChange(event)}
                 />
                 <span className="register__input-error"></span>
 
-                <button type="submit" className="register__button" onClick={handleSubmit}>Registrate</button>
+                <button className="register__button" onClick={(e) => handleSubmit(e)}>Registrate</button>
                 <Link to="/login">
                     <p className="new__login">¿Ya tienes cuenta? Inicia sesión</p>
                 </Link>

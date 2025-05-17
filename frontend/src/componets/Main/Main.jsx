@@ -9,7 +9,7 @@ import { api } from "../../../utils/api";
 import Card from "../Card/card";
 import PreLoader from "../Preloader/preloader";
 import Popup from "../../Popup/Popup";
-import { set } from "mongoose";
+
 export default function Main() {
     const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState([]);
@@ -21,7 +21,7 @@ export default function Main() {
             setTimeout(() => {
                 setLoading(false);
 
-            }, 4000000);
+            }, 2000);
             // setLoading(false);
 
 

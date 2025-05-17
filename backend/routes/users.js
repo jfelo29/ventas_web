@@ -4,7 +4,7 @@ const validator = require('validator');
 const { getAllUsers, getUserById, createUser, deleteUser } = require('../controllers/users');
 const Users = require('../models/users');
 const auth = require('../middlewares/auth');
-const { number } = require('joi');
+
 
 
 const valideURL = (value, helpers) => {
@@ -16,8 +16,11 @@ const valideURL = (value, helpers) => {
 };
 
 router.get('/users', getAllUsers);
-//router.get('/users/me', auth, getUserById);
+
+router.get('/users/me', auth, getUserById);
+
 router.get('/users/:id', getUserById);
+
 router.post('/users', celebrate({
  body: Joi.object().keys({
   name: Joi.string().min(3).max(50).required(),
@@ -26,16 +29,19 @@ router.post('/users', celebrate({
   password: Joi.string().min(2).max(100).required(),
  }),
 }), createUser);
+
 router.patch('/users/me', auth, async (req, res) => {
  try {
-  const { name, email, password } = req.body;
+  const { name, email, password, number } = req.body;
   const user = await User.findById(req.user._id);
   if (!user) {
    return res.status(404).json({ error: 'No encontrado' });
   }
   user.name = name;
+  user.number = number;
   user.email = email;
   user.password = password;
+
   await user.save();
   res.status(200).json(user);
  } catch (error) {

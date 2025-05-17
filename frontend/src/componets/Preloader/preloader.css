@@ -1,0 +1,31 @@
+.preloader {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 200px; 
+ width: 400px; 
+ 
+}
+
+.skeleton-image1 {
+ display: block;
+background-color: black;
+width: 200px;
+height: 200px;
+}
+.skeleton-image2 {
+ display: block;
+background-color: black;
+width: 100px;
+height: 100px;
+
+
+}
+.skeleton-image3 {
+ display: block;
+background-color: black;
+width: 100px;
+height: 100px;
+
+
+}

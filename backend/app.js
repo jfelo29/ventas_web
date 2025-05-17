@@ -23,17 +23,17 @@ mongoose.connect('mongodb://127.0.0.1:27018/ventas').then(() => {
     console.log('Error al conectar a MongoDB');
 });
 
-//app.use('/auth', auth);
+app.use('/auth', auth);
 app.use('/', usersRouter);
 
 app.use(requestLogger);
 app.use('/signin', signin.signin),
     app.use('/signup', users.createUser);
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
     res.status(500).send({ message: err.message });
 });
 
-//app.use(errorLogger);
+app.use(errorLogger);
 app.use(errors());
 app.use((req, res) => {
     res.status(404).send({ message: 'Recurso solicitado no encontrado' });

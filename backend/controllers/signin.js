@@ -1,27 +1,29 @@
 require('dotenv').config();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { User } = require('../models/users');
+const User = require('../models/users');
 
 const { JWT_SECRET = 'secret-key' } = process.env;
 
 module.exports.signin = (req, res) => {
     const { email, password } = req.body;
+
     User.findOne({ email })
         .select('+password')
         .then(user => {
             if (!user) {
                 return res.status(400).json({ error: 'Usuario no encontrado' });
             }
-            const isMatch = bcrypt.compareSync(password, user.password);
-            if (!isMatch) {
-                return res.status(400).json({ error: 'Contraseña incorrecta' });
-            }
-            const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET);
-            res.status(200).json({ token });
+            return bcrypt.compare(password, user.password).then((matched) => {
+                if (!matched) {
+                    return res.status(401).send({ message: 'datos de usuario incorrectos' });
+                }
+                const token = jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
+                res.status(200).send({ token });
+            });
         })
-        .catch(error => {
-            res.status(500).json({ error: 'Error interno del servidor' });
+        .catch((err) => {
+            res.status(500).json({ message: err.message });
         });
-
 };
+

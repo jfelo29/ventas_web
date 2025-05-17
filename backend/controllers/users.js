@@ -33,8 +33,11 @@ const createUser = async (req, res) => {
 
     try {
         const { name, email, password, number } = req.body;
+
         bcrypt.hash(password, 10)
+
             .then(hash => {
+
                 const user = new User(
                     {
                         name,

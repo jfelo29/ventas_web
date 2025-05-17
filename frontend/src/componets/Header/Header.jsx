@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
 import CurrentUserContext from "../contexts/currentUserContext";
 import { useContext } from "react";
-import Popup from "../../Popup/Popup";
+
 export default function Header(props) {
     const currentUser = useContext(CurrentUserContext);
     const navigate = useNavigate();
@@ -32,13 +32,7 @@ export default function Header(props) {
                     )}
                 </div>
             </div>
-            {
-                props.popup && (
-                    <Popup onClose={props.handleClosePopup} title={props.popup.title}>
-                        {props.popup.children}
-                    </Popup>
-                )
-            }
+
         </header >
     );
 }

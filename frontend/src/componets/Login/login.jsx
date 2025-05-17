@@ -29,11 +29,11 @@ export default function Login(props) {
                     className="imput__email"
                     required
                     value={data.email}
-                    onchange={(event) => handleChange(event)}
+                    onChange={(event) => handleChange(event)}
                 />
                 <span className="login__input-error "></span>
 
-                <label htmlFor="pasword"></label>
+                <label htmlFor="password"></label>
                 <input type="password"
                     name="password"
                     placeholder="Contraseña"
@@ -41,7 +41,7 @@ export default function Login(props) {
                     className="imput__password"
                     required
                     value={data.password}
-                    onchange={(event) => handleChange(event)}
+                    onChange={(event) => handleChange(event)}
                 />
                 <span className="login__input-error"></span>
 

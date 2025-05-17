@@ -1,22 +1,12 @@
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Skeleton from "@mui/material/Skeleton"
+
 export default function PreLoader() {
-  return (
-    <div className="preloader">
-      <SkeletonTheme color="#202020" highlightColor="#444">
-        <p>
-          <Skeleton count={3} />
-        </p>
-      </SkeletonTheme>;
-    </div>
+  return (<>
+    <Skeleton variant="text" />
+    <Skeleton variant="circle" width={40} height={40} />
+    <Skeleton variant="rect" width={210} height={118} />
+  </>
   );
 }
-
-
-
-
-
-
-
-
 
 

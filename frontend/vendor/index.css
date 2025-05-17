@@ -1,6 +1,9 @@
 @import url(./normalize.css);
+
 @import url(../src/componets/Header/header.css);
 @import url(../src/componets/Main/main.css);
 @import url(../src/componets/Footer/footer.css);
 @import url(../src/componets/Login/login.css);
 @import url(../src/componets/Register/Register.css);
+@import url(../src/componets/Preloader/preloader.css);
+
