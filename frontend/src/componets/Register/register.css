@@ -29,33 +29,15 @@
     background: linear-gradient(45deg, rgb(20, 20, 20), rgb(177, 139, 101));
 }
 
-.imput__name {
-    margin-top: ;
-    width: 500px;
-    height: 50px;
-    border-radius: 5px;
-    
-}
-.imput__number {
+
+.register__input {
     width: 500px;
     height: 50px;
     border-radius: 5px;
     margin-bottom: 10px;
     
 }
-.imput__email {
-    width: 500px;
-    height: 50px;
-    border-radius: 5px;
-    
-}
-.imput__password {
-    width: 500px;
-    height: 50px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    
-}
+
 .register__button {
     width: 500px;
     height: 50px;
@@ -65,8 +47,40 @@
     font-size: 20px;
 }
 
-.new__login {
+.register__login {
     font-size: 20px;
     color: rgb(241, 216, 216);
     cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+    .register__form {
+        width: 320px;
+        height: 320px;
+        margin-top: 50px;
+        gap: 5px;
+
+    }
+    .register__title {
+        font-size: 20px;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+    .register__input {
+        
+        width: 260px;
+        height: 50px;
+        border-radius: 5px;
+       
+    }
+
+    .register__button {
+        width: 260px;
+        height: 50px;
+         border-radius: 5px;
+      }
+      .register__login {
+        font-size: 15px;
+    
+      }
 }

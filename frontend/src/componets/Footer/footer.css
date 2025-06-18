@@ -8,7 +8,7 @@
     padding-left: 50px;
     
 }
-.footer__logo {
+.footer__logo-image {
     
     
     width: 110px;
@@ -18,7 +18,7 @@
     
 
 }
-.about__us {
+.footer__about-us {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,18 +33,18 @@
 
     
 }
-.modo__uso {
+.footer__modo-uso {
     font-size: 15px;
     margin-top: 10px;
     color: blanchedalmond;
     text-decoration: none;
 } 
 
-.asks {
+.footer__asks {
     font-size: 15px;
     text-decoration: none;
 }
-.nuetro__productos {
+.footer__nuetro-productos {
     font-size: 15px;
     color: blanchedalmond;
     text-decoration: none;
@@ -72,4 +72,31 @@
     font-size: 15px;
     color: blanchedalmond;
     text-decoration: none;
+}
+
+@media screen and (max-width: 880px) {
+
+}
+@media screen and (max-width: 320px) {
+    .footer__content {
+    
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: black;
+    padding: 16px ;
+    padding-left: 50px;
+    
+}
+    .footer__logo-image {
+ display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.footer__about-us {
+  font-size: 5px;
+    
+
+    
+}
 }

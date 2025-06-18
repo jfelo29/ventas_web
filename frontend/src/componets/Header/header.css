@@ -3,26 +3,33 @@
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     max-width: 100%;
-
- 
-    
 }
 
 .header__container {
     display: flex;
     justify-content: space-between;
-  margin: auto;
+    margin: auto;
     max-width: 1100px;
     
 }
+.hamburguesa {
+display: none;
+font-size: 24px;
+background: none;
+border: none;
+cursor: pointer;
+}
+
+.header__right {
+display: flex;
+}
 
 .header__logo {
-    /* padding: 45px 0; */
+    
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    /* margin-left: 50px; */
-    /* padding-bottom: 20px; */
+    
     
 
 }
@@ -38,7 +45,7 @@
     font-size: 20px;
     font-weight: bold;
     color: white;
-    /* margin-left: 50px; */
+  
     margin-top: 0;
 
 }
@@ -47,15 +54,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-right: 50px; */
+    flex-direction: row;
     gap: 20px;
-    /* padding-top: 50px; */
+
     
 }
 
-
-.header__mail {
+.header__signin {
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.header__icon {
+    display: flex;
+    flex-direction: row;
     color: white;
+    font-size: 30px;
+    
+    transition: all 0.3s ease;
+    justify-content: center;
+    
+}
+    .header__hamburguesa {
+        display: none;
 }
 
 
@@ -89,31 +112,87 @@
     justify-content: center;
 }
 
-.header__button {
+.header__link, .header__button {
 
     background: linear-gradient(45deg, rgb(20, 20, 20), rgb(177, 139, 101));
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    /* font-size: 25px;
-    font-weight: bold; */
-    /* box-shadow: 0 4px 6px rgba(240, 238, 238, 0.2); */
     cursor: pointer;
-    /* width: 200px; */
-    /* height: 50px; */
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    /* opacity: 0.8; */
+
 }
 
 .header__button:hover {
     opacity: 1;
-    /* text-decoration: underline; */
+    
     font-weight: bold;
-    /* transform: scale(1.05); */
+    
+}
+
+@media screen and (max-width: 880px) {
+
+.header__container {
+    display: flex;
+
+}
+    .header__hamburguesa {
+        display: none;
+}
+
+
+
+.header__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+}
+@media screen and (max-width: 450px) {
+        .header {
+    max-width: 320px;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+.header__name {
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    
+    margin-top: 0;
+
+}
+    .header__hamburguesa {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 35px;
+}
+
+.header__right {
+    display: none;
+}
+
+.show-menu {
+    display: flex;
+   align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 }
 

@@ -27,7 +27,7 @@ export default function Register(props) {
                     placeholder="Nombre"
                     name="name"
                     id="name"
-                    className="imput__name"
+                    className="register__input"
                     required
                     value={data.name}
                     onChange={(event) => handleChange(event)} />
@@ -36,7 +36,7 @@ export default function Register(props) {
                     name="number"
                     placeholder="Numero de telefono"
                     id="number"
-                    className="imput__number"
+                    className="register__input"
                     required
                     value={data.number}
                     onChange={(event) => handleChange(event)} />
@@ -45,7 +45,7 @@ export default function Register(props) {
                     name="email"
                     placeholder="Correo"
                     id="email"
-                    className="imput__email"
+                    className="register__input"
                     required
                     value={data.email}
                     onChange={(event) => handleChange(event)}
@@ -57,7 +57,7 @@ export default function Register(props) {
                     name="password"
                     placeholder="Contraseña"
                     id="password"
-                    className="imput__password"
+                    className="register__input"
                     required
                     value={data.password}
                     onChange={(event) => handleChange(event)}
@@ -66,7 +66,7 @@ export default function Register(props) {
 
                 <button className="register__button" onClick={(e) => handleSubmit(e)}>Registrate</button>
                 <Link to="/login">
-                    <p className="new__login">¿Ya tienes cuenta? Inicia sesión</p>
+                    <p className="register__login">¿Ya tienes cuenta? Inicia sesión</p>
                 </Link>
             </form>
         </div>

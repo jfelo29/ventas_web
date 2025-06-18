@@ -115,8 +115,8 @@ border-radius: 30px;
 .main__envios__text {
     font-size: 25px;
 }
-.main__envios__imagen {
-    width: 300px;
+.main__envios-imagen {
+    width: 350px;
     border-radius: 50px;
     overflow: hidden;
     margin-top: 50px;
@@ -125,7 +125,7 @@ border-radius: 30px;
 .main__envios__imagen:hover {
     transform: scale(1.05);
 }
-.use__explain {
+.main__use-explain {
     display: flex;
 flex-direction: column;
 justify-content: center;
@@ -134,7 +134,7 @@ margin: auto;
 max-width: 900px;
 
 }
-.preguntas__frecuentes {
+.main__preguntas {
     display: flex;
 flex-direction: column;
 justify-content: center;
@@ -143,10 +143,10 @@ margin: auto;
 max-width: 900px;
 
 }
-.title__main {
+.main__title-explain {
     font-size: 40px;
 }
-.text__main {
+.main__text-explain {
     font-size: 25px;
     margin-bottom: 50px;
 }
@@ -165,13 +165,83 @@ max-width: 900px;
     transform: scale(1.05);
 }
 
-/*@media screen and (max-width: 1020px) {
+@media screen and (max-width: 880px) {
+    .main{
+       max-width: 880px; 
+    }
+    .main__text-explain {
+        margin: auto;
+        font-size: 20px;
+        
+    }
     .main__content {
         grid-template-columns: repeat(1, 1fr);
         max-width: 880px;
     }
     .cardS__list {
+grid-template-columns: repeat(1,1fr);
+margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+   
+    padding: 50px;
+    max-width: 320px;
+}
+}
+@media screen and (max-width: 450px) {
+      .header {
+    max-width: 320px;
+    margin-left: auto;
+  }
+    .main__content {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 320px;
+    }
+    .main__subtitle {
+        font-size: 30px;
+    }
+    .main__envios__title {
+        font-size: 30px;
+    }
+    .main__envios__text {
+        font-size: 20px;
+    }
+    .main__title-explain {
+        font-size: 30px;
+    }
+    .main__text-explain {
+        font-size: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .cardS__list {
         grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+   
+    padding: 50px;
+    max-width: 320px;
+   
+}
+.main__use-explain {
+    max-width: 320px;
+}
+
+.main__explain {
+    padding-top:50px;
+    ;
+    text-align: center;
+    font-size: 20px;
+    
+    margin: auto;
+    max-width: 320px;
+    margin: auto;
+    margin-bottom: 50px;
+}   
+.whatsapp-fixed img {
+    width: 50px; 
+    height: 40px;
+    cursor: pointer;
 }
 }
-*/

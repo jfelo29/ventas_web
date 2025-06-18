@@ -1,6 +1,4 @@
-//import unidad from "../../../images/minoxidil_unidad.png";
-// import triple from "../../../images/minoxidil_x3.png";
-// import caja from "../../../images/minoxidil_caja.png";
+
 import correoImagen from "../../../images/correo.png";
 import whatsapp from "../../../images/whatsapp-3.svg";
 import { useState } from "react";
@@ -8,7 +6,6 @@ import { useEffect } from "react";
 import { api } from "../../../utils/api";
 import Card from "../Card/card";
 import PreLoader from "../Preloader/preloader";
-import Popup from "../../Popup/Popup";
 
 export default function Main() {
     const [loading, setLoading] = useState(true);
@@ -22,7 +19,7 @@ export default function Main() {
                 setLoading(false);
 
             }, 2000);
-            // setLoading(false);
+
 
 
         });
@@ -46,20 +43,15 @@ export default function Main() {
 
                     />
                 ))}
-
-
-
-
-
             </div>
             <div className="main__envios">
-                <h2 className="main__envios__title">Envios a todo el pais</h2>
-                <p className="main__envios__text">hacemos envios a todo el pais por medio de correo argentino.</p>
-                <img src={correoImagen} alt="correo_argentino" className="main__envios__imagen" />
+                <h2 className="main__envios-title">Envios a todo el pais</h2>
+                <p className="main__envios-text">hacemos envios a todo el pais por medio de correo argentino.</p>
+                <img src={correoImagen} alt="imagen de paqueteria de correo argentino" className="main__envios-imagen" />
             </div>
-            <div className="use__explain">
-                <h2 className="title__main" id="modo-uso">Modo de uso</h2>
-                <p className="text__main">primer paso para usar Minoxidil es que tu pelo y o zona de la barba  debe estar limpio y bien seco. Debes aplicarlo en la zona a tratar, zona de cuero cabelludo o barba.
+            <div className="main__use-explain">
+                <h2 className="main__title-explain" id="modo-uso">Modo de uso</h2>
+                <p className="main__text-explain">primer paso para usar Minoxidil es que tu pelo y o zona de la barba  debe estar limpio y bien seco. Debes aplicarlo en la zona a tratar, zona de cuero cabelludo o barba.
 
 
                     La dosis diaria recomendada es de 1 ml de la solución cada 12horas empezando por el centro de la zona a tratar. Se deberá respetar la dosis diaria recomendada independientemente de la extensión de la alopecia. La dosis máxima diaria recomendada es de 2 ml.
@@ -72,9 +64,9 @@ export default function Main() {
 
                     Después de utilizar el frasco con el Minoxidil debes volver a taparlo y conservarlo en un lugar seco que no esté en contacto directo con la luz solar. No conservar a temperatura superior a 30ºC.</p>
             </div>
-            <div className="preguntas__frecuentes">
-                <h2 className="title__main" id="preguntas-frecuentes">Preguntas frecuentes</h2>
-                <p className="text__main">
+            <div className="main__preguntas">
+                <h2 className="main__title-explain" id="preguntas-frecuentes">Preguntas frecuentes</h2>
+                <p className="main__text-explain">
                     -el producto es original?<br />
                     -si es original, es un producto importado. <br />
                     -hacen envios? <br />
@@ -88,7 +80,7 @@ export default function Main() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="whatsapp-fixed">
-                        <img src={whatsapp} alt="WhatsApp" />
+                        <img src={whatsapp} alt="logo de whatsapp" />
                     </a>
                 </div>
             </div>
