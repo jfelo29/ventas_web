@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const urlregex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+
 
 const productSchema = new mongoose.Schema({
  name: {
@@ -19,15 +19,12 @@ const productSchema = new mongoose.Schema({
  image: {
   type: String,
   required: true,
-  match: urlregex,
+
  },
 
 
- createdAt: {
-  type: Date,
-  default: Date.now,
- },
-});
+
+}, { timestamps: true });
 
 module.exports = mongoose.model('Product', productSchema);
 

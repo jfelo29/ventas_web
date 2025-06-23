@@ -1,1 +1,1 @@
-export const baseUrl = "http://argentinabarba.chickenkiller.com";
+export const baseUrl = "http://localhost:3001";
