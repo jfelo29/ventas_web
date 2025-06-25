@@ -22,7 +22,7 @@ class Api {
     getCards() {
         return fetch(`${this.baseUrl}/products`)
             .then(response => { return response.json() })
-            //.then(data => { return data; })
+
             .catch(error => {
                 console.error("Error al obtener los datos:", error);
             });
@@ -51,4 +51,3 @@ const headers = {
 }
 
 export const api = new Api(baseUrl, headers);
-//eSTO ESUNA PRUEBA DE API
