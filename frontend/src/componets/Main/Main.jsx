@@ -14,7 +14,7 @@ export default function Main() {
     useEffect(() => {
 
         api.getCards().then(data => {
-            console.log(data);
+
             setCards(data);
             setTimeout(() => {
                 setLoading(false);

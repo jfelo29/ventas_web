@@ -1,6 +1,6 @@
 import logo from "../../../images/logo.png";
 import { Link } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CurrentUserContext from "../contexts/currentUserContext";
 import { useContext } from "react";
 import { VscAccount } from "react-icons/vsc";
@@ -9,7 +9,7 @@ export default function Header(props) {
 
     const currentUser = useContext(CurrentUserContext);
     const [menuVisible, setMenuVisible] = useState(false);
-    const navigate = useNavigate();
+
     const location = useLocation();
     return (
         <header className="header">
