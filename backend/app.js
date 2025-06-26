@@ -17,7 +17,7 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors());
-// app.options('*', cors());
+app.options('*', cors());
 app.use(express.json());
 mongoose.connect('mongodb://127.0.0.1:27017/ventas').then(() => {
     console.log('Conectado a MongoDB');
@@ -25,7 +25,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/ventas').then(() => {
     console.log('Error al conectar a MongoDB');
 });
 
-//app.use('/auth', auth);
+
 app.use('/', usersRouter);
 app.use('/products', productsRouter);
 app.use(requestLogger);
