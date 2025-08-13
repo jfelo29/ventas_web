@@ -14,9 +14,10 @@ export default function Footer() {
                 <a className="footer__modo-uso" href="#modo-uso">
                     <p>modo de uso</p>
                 </a>
-                <div className="footer__asks">
+                <a className="footer__asks" href="#preguntas-frecuentes">
                     <p>preguntas frecuentes</p>
-                </div>
+                </a>
+
             </div>
             <div className="footer__contact" >contacto
                 <a className="footer__mail" >
