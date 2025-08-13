@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <div className="footer__contact" >contacto
                 <a className="footer__mail" >
-                    <p>correo: barba@barba.com</p>
+                    <p>correo: </p>
                 </a>
 
                 <div className="footer__whatsapp">
@@ -28,7 +28,7 @@ export default function Footer() {
                 </div>
 
                 <div >
-                    <p>instagram: @barba</p>
+                    <p>instagram: minoxidil.kirkland.barba</p>
 
 
                 </div>
