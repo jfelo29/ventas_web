@@ -84,13 +84,13 @@
 
 @media screen and (max-width: 450px) {
     .footer__content {
+
         justify-content: space-between;
+        flex-direction: column;
         background-color: black;
         padding: 16px;
         padding-left: 50px;
-        gap: 15px;
-        font-size: 10px;
-        margin-right: 1;
+
     }
 
     .footer__logo-image {
@@ -113,13 +113,11 @@
     .footer__content {
 
         justify-content: space-between;
-
+        flex-direction: column;
         background-color: black;
         padding: 16px;
         padding-left: 50px;
-        gap: 15px;
-        font-size: 10px;
-        margin-right: 1;
+
     }
 
     .footer__logo-image {

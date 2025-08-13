@@ -14,14 +14,13 @@ export default function Footer() {
                 <a className="footer__modo-uso" href="#modo-uso">
                     <p>modo de uso</p>
                 </a>
-                <a className="footer__asks" href="#preguntas-frecuentes">
+                <div className="footer__asks">
                     <p>preguntas frecuentes</p>
-                </a>
-
+                </div>
             </div>
             <div className="footer__contact" >contacto
                 <a className="footer__mail" >
-                    <p>correo: </p>
+                    <p>correo: barba@barba.com</p>
                 </a>
 
                 <div className="footer__whatsapp">
@@ -29,7 +28,7 @@ export default function Footer() {
                 </div>
 
                 <div >
-                    <p>instagram: minoxidil.kirkland.barba</p>
+                    <p>instagram: @barba</p>
 
 
                 </div>
