@@ -79,19 +79,19 @@ export default function App() {
 
     return (
         <CurrentUserContext.Provider value={currentUser}>
-            <div className='page'>
-                <Header
-                    handleSignout={handleSignout}
-                    email={currentUser.email} />
-                <Routes>
-                    <Route path="/" element={<Main />} />
-                    <Route path="/login" element={<Login signin={handleSignin} />} />
-                    <Route path="/register" element={<Register signup={handleSignup} />} />
+
+            <Header
+                handleSignout={handleSignout}
+                email={currentUser.email} />
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/login" element={<Login signin={handleSignin} />} />
+                <Route path="/register" element={<Register signup={handleSignup} />} />
 
 
-                </Routes>
-                <Footer />
-            </div>
+            </Routes>
+            <Footer />
+
         </CurrentUserContext.Provider>
     )
 }

@@ -3,27 +3,21 @@ import correoImagen from "../../../images/correo.png";
 import whatsapp from "../../../images/whatsapp-3.svg";
 import { useState } from "react";
 import { useEffect } from "react";
-import { api } from "../../../utils/api";
+//import { api } from "../../../utils/api";
 import Card from "../Card/card";
 import PreLoader from "../Preloader/preloader";
 
+
 export default function Main() {
     const [loading, setLoading] = useState(true);
-    const [cards, setCards] = useState([]);
+    const [cards,] = useState([{ image: "/images/minoxidil_unidad.png", name: "unidad", price: "24.000" }, { image: "/images/minoxidil_x3.png", name: "3 minoxidil", price: "79.000" }, { image: "/images/minoxidil_caja.png", name: "caja minoxidil", price: "145.000" }]);
 
     useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
 
-        api.getCards().then(data => {
-            console.log(data);
-            setCards(data);
-            setTimeout(() => {
-                setLoading(false);
+        }, 2000);
 
-            }, 2000);
-
-
-
-        });
     }, []);
 
 
@@ -32,7 +26,8 @@ export default function Main() {
 
     return (
 
-        <div className="main">
+
+        <main className="main">
 
             <h2 className="main__subtitle" id="about-us">Conoce Nuestros Productos</h2>
             <p className="main__explain">minoxidil kirkland para barba y cabello, puedes elegir entre 3 opciones. frasco unidad de 60ml, 3 frasco  de 60 ml cada uno o caja por 6 unidades de 60 ml. <br /> La caja  </p>
@@ -85,7 +80,7 @@ export default function Main() {
                     </a>
                 </div>
             </div>
-        </div>
+        </main>
     );
 
 }
