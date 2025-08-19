@@ -44,7 +44,7 @@ class Api {
     }
 
 }
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://back-ventas-delta.vercel.app";
 const headers = {
     "Content-Type": "application/json",
     authorization: getToken()
