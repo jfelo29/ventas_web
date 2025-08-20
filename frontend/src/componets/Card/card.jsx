@@ -4,12 +4,12 @@ export default function Card(props) {
 
     return (<div className="card cardS__list">
         <div className="card_portada">
-            <img src={image} alt="card" className="card__image" > </img>
+            <img src={image} alt="card" className="card__image" />
         </div>
         <div>
 
             <h3>
-                <a target="_blank" className="name__product"
+                <a className="name__product"
                     href={href}>{name}</a>
             </h3>
             <div className="card__price">
