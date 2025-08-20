@@ -1,6 +1,6 @@
 
 export default function Card(props) {
-    const { image, name, price } = props.card;
+    const { image, name, price, href } = props.card;
 
     return (<div className="card cardS__list">
         <div className="card_portada">
@@ -9,8 +9,8 @@ export default function Card(props) {
         <div>
 
             <h3>
-                <a className="name__product"
-                    href="">{name}</a>
+                <a target="_blank" className="name__product"
+                    href={href}>{name}</a>
             </h3>
             <div className="card__price">
                 <span>{price}
