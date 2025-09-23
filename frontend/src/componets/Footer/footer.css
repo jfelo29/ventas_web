@@ -69,6 +69,9 @@
 }
 
 .intagram__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
 
@@ -81,13 +84,26 @@
 }
 
 .footer__whatsapp {
+    display: flex;
+
+
+}
+
+.whatsapp__footer {
+    width: 15px;
+    height: 15px;
+}
+
+.footer__instagram {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer__instagram {
-    align-items: center;
-    justify-content: center;
+.intagram__logo {
+    width: 15px;
+    height: 15px;
+
 }
 
 @media screen and (max-width: 700px) {
@@ -174,5 +190,23 @@
 
 
 
+    }
+
+    .footer__contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__whatsapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .whatsapp__footer {
+        width: 5px;
+        height: 5px;
     }
 }

@@ -1,4 +1,6 @@
 import logo from "../../../images/logo.png";
+import instagram from "../../../images/instagram.png";
+import whatsapp1 from "../../../images/whatsappfooter.png";
 export default function Footer() {
     return (
 
@@ -20,17 +22,18 @@ export default function Footer() {
             </div>
             <div className="footer__contact" >contacto
 
-
-
                 <div className="footer__whatsapp">
-                    <p >whatsapp </p>
-                    <p>+5491123933206</p>
+                    <p>
+                        <img src={whatsapp1} alt="whatsapp1" className="whatsapp__footer" />
+                    </p>
+                    <p className="footer__text">+5491123933206</p>
+
                 </div>
                 <div className="footer__instagram">
-                    <p >instagram</p>
-                    <p >@minoxidil.kirkland.barba</p>
-
-
+                    <p>
+                        <img src="/images/instagram.png" alt="instagram" className="intagram__logo" />
+                    </p>
+                    <p className="footer__text">@minoxidil.kirkland.barba</p>
 
                 </div>
             </div>
